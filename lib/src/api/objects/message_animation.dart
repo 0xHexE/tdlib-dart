@@ -43,7 +43,7 @@ class MessageAnimation extends MessageContent {
           Animation.fromJson(json['animation'] as Map<String, dynamic>?)!,
       caption:
           FormattedText.fromJson(json['caption'] as Map<String, dynamic>?)!,
-      showCaptionAboveMedia: json['show_caption_above_media'] as bool,
+      showCaptionAboveMedia: (json['show_caption_above_media'] ?? false) as bool,
       hasSpoiler: json['has_spoiler'] as bool,
       isSecret: json['is_secret'] as bool,
     );
