@@ -23,7 +23,7 @@ class ChatMemberStatusMember extends ChatMemberStatus {
     }
 
     return ChatMemberStatusMember(
-      memberUntilDate: json['member_until_date'] as int,
+      memberUntilDate: (json['member_until_date'] ?? 0) as int,
     );
   }
 
