@@ -76,7 +76,7 @@ class UserTypeBot extends UserType {
       canConnectToBusiness: json['can_connect_to_business'] as bool,
       canBeAddedToAttachmentMenu:
           json['can_be_added_to_attachment_menu'] as bool,
-      activeUserCount: json['active_user_count'] as int,
+      activeUserCount: (json['active_user_count'] ?? 0) as int,
     );
   }
 
