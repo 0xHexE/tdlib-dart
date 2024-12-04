@@ -194,7 +194,7 @@ class SupergroupFullInfo extends TdObject {
       slowModeDelay: json['slow_mode_delay'] as int,
       slowModeDelayExpiresIn:
           (json['slow_mode_delay_expires_in'] as num).toDouble(),
-      canEnablePaidReaction: json['can_enable_paid_reaction'] as bool,
+      canEnablePaidReaction: (json['can_enable_paid_reaction'] ?? false) as bool,
       canGetMembers: json['can_get_members'] as bool,
       hasHiddenMembers: json['has_hidden_members'] as bool,
       canHideMembers: json['can_hide_members'] as bool,
