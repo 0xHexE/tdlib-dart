@@ -149,7 +149,7 @@ class Supergroup extends TdObject {
       hasLinkedChat: json['has_linked_chat'] as bool,
       hasLocation: json['has_location'] as bool,
       signMessages: json['sign_messages'] as bool,
-      showMessageSender: json['show_message_sender'] as bool,
+      showMessageSender: (json['show_message_sender'] ?? false) as bool,
       joinToSendMessages: json['join_to_send_messages'] as bool,
       joinByRequest: json['join_by_request'] as bool,
       isSlowModeEnabled: json['is_slow_mode_enabled'] as bool,
