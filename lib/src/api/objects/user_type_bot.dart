@@ -69,7 +69,7 @@ class UserTypeBot extends UserType {
       canBeEdited: json['can_be_edited'] as bool,
       canJoinGroups: json['can_join_groups'] as bool,
       canReadAllGroupMessages: json['can_read_all_group_messages'] as bool,
-      hasMainWebApp: json['has_main_web_app'] as bool,
+      hasMainWebApp: (json['has_main_web_app'] ?? false) as bool,
       isInline: json['is_inline'] as bool,
       inlineQueryPlaceholder: json['inline_query_placeholder'] as String,
       needLocation: json['need_location'] as bool,
