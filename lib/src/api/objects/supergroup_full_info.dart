@@ -210,7 +210,7 @@ class SupergroupFullInfo extends TdObject {
       canHaveSponsoredMessages: json['can_have_sponsored_messages'] as bool,
       hasAggressiveAntiSpamEnabled:
           json['has_aggressive_anti_spam_enabled'] as bool,
-      hasPaidMediaAllowed: json['has_paid_media_allowed'] as bool,
+      hasPaidMediaAllowed: (json['has_paid_media_allowed'] ?? false) as bool,
       hasPinnedStories: json['has_pinned_stories'] as bool,
       myBoostCount: json['my_boost_count'] as int,
       unrestrictBoostCount: json['unrestrict_boost_count'] as int,
