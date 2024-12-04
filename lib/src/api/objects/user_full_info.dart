@@ -141,7 +141,7 @@ class UserFullInfo extends TdObject {
       bio: FormattedText.fromJson(json['bio'] as Map<String, dynamic>?),
       birthdate: Birthdate.fromJson(json['birthdate'] as Map<String, dynamic>?),
       personalChatId: json['personal_chat_id'] as int,
-      giftCount: json['gift_count'] as int,
+      giftCount: (json['gift_count'] ?? 0) as int,
       groupInCommonCount: json['group_in_common_count'] as int,
       businessInfo:
           BusinessInfo.fromJson(json['business_info'] as Map<String, dynamic>?),
