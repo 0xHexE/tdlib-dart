@@ -231,8 +231,8 @@ class Message extends TdObject {
       senderBusinessBotUserId: json['sender_business_bot_user_id'] as int,
       senderBoostCount: json['sender_boost_count'] as int,
       authorSignature: json['author_signature'] as String?,
-      mediaAlbumId: int.tryParse(json['media_album_id']) ?? 0,
-      effectId: int.tryParse(json['effect_id']) ?? 0,
+      mediaAlbumId: int.tryParse((json['media_album_id'] ?? '0')) ?? 0,
+      effectId: int.tryParse((json['effect_id'] ?? '0')) ?? 0,
       hasSensitiveContent: json['has_sensitive_content'] as bool,
       restrictionReason: json['restriction_reason'] as String,
       content:
