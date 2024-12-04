@@ -203,7 +203,7 @@ class SupergroupFullInfo extends TdObject {
       canGetStatistics: json['can_get_statistics'] as bool,
       canGetRevenueStatistics: json['can_get_revenue_statistics'] as bool,
       canGetStarRevenueStatistics:
-          json['can_get_star_revenue_statistics'] as bool,
+          (json['can_get_star_revenue_statistics'] ?? false) as bool,
       canToggleAggressiveAntiSpam:
           json['can_toggle_aggressive_anti_spam'] as bool,
       isAllHistoryAvailable: json['is_all_history_available'] as bool,
