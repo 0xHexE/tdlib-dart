@@ -43,7 +43,7 @@ class MessageReactions extends TdObject {
           ((json['paid_reactors'] as List<dynamic>?) ?? <dynamic>[])
               .map((item) => PaidReactor.fromJson(item))
               .toList()),
-      canGetAddedReactions: json['can_get_added_reactions'] as bool,
+      canGetAddedReactions: (json['can_get_added_reactions'] ?? false) as bool,
     );
   }
 
