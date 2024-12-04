@@ -94,7 +94,7 @@ class ChatInviteLink extends TdObject {
           json['subscription_pricing'] as Map<String, dynamic>?),
       memberLimit: json['member_limit'] as int,
       memberCount: json['member_count'] as int,
-      expiredMemberCount: json['expired_member_count'] as int,
+      expiredMemberCount: (json['expired_member_count'] ?? 0) as int,
       pendingJoinRequestCount: json['pending_join_request_count'] as int,
       createsJoinRequest: json['creates_join_request'] as bool,
       isPrimary: json['is_primary'] as bool,
