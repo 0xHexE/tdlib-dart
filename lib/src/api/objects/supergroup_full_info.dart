@@ -203,15 +203,15 @@ class SupergroupFullInfo extends TdObject {
       canGetStatistics: json['can_get_statistics'] as bool,
       canGetRevenueStatistics: json['can_get_revenue_statistics'] as bool,
       canGetStarRevenueStatistics:
-          json['can_get_star_revenue_statistics'] as bool,
+          (json['can_get_star_revenue_statistics'] ?? false) as bool,
       canToggleAggressiveAntiSpam:
-          json['can_toggle_aggressive_anti_spam'] as bool,
-      isAllHistoryAvailable: json['is_all_history_available'] as bool,
-      canHaveSponsoredMessages: json['can_have_sponsored_messages'] as bool,
+          (json['can_toggle_aggressive_anti_spam'] ?? false) as bool,
+      isAllHistoryAvailable: (json['is_all_history_available'] ?? false) as bool,
+      canHaveSponsoredMessages: (json['can_have_sponsored_messages'] ?? false) as bool,
       hasAggressiveAntiSpamEnabled:
-          json['has_aggressive_anti_spam_enabled'] as bool,
-      hasPaidMediaAllowed: json['has_paid_media_allowed'] as bool,
-      hasPinnedStories: json['has_pinned_stories'] as bool,
+          (json['has_aggressive_anti_spam_enabled'] ?? false) as bool,
+      hasPaidMediaAllowed: (json['has_paid_media_allowed'] ?? false) as bool,
+      hasPinnedStories: (json['has_pinned_stories'] ?? false) as bool,
       myBoostCount: json['my_boost_count'] as int,
       unrestrictBoostCount: json['unrestrict_boost_count'] as int,
       stickerSetId: int.tryParse(json['sticker_set_id']) ?? 0,
