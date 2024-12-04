@@ -109,7 +109,7 @@ class BotInfo extends TdObject {
       defaultChannelAdministratorRights: ChatAdministratorRights.fromJson(
           json['default_channel_administrator_rights']
               as Map<String, dynamic>?),
-      canGetRevenueStatistics: json['can_get_revenue_statistics'] as bool,
+      canGetRevenueStatistics: (json['can_get_revenue_statistics'] ?? false) as bool,
       hasMediaPreviews: json['has_media_previews'] as bool,
       editCommandsLink: InternalLinkType.fromJson(
           json['edit_commands_link'] as Map<String, dynamic>?),
