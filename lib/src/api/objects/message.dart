@@ -233,7 +233,7 @@ class Message extends TdObject {
       authorSignature: json['author_signature'] as String?,
       mediaAlbumId: int.tryParse((json['media_album_id'] ?? '0')) ?? 0,
       effectId: int.tryParse((json['effect_id'] ?? '0')) ?? 0,
-      hasSensitiveContent: json['has_sensitive_content'] as bool,
+      hasSensitiveContent: (json['has_sensitive_content'] ?? false) as bool,
       restrictionReason: json['restriction_reason'] as String,
       content:
           MessageContent.fromJson(json['content'] as Map<String, dynamic>?)!,
