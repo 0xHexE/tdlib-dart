@@ -51,7 +51,7 @@ class BotInfo extends TdObject {
   /// empty, then /privacy command must be used if supported by the bot. If the
   /// command isn't supported, then https://telegram.org/privacy-tpa must be
   /// opened
-  final String privacyPolicyUrl;
+  final String? privacyPolicyUrl;
 
   /// [defaultGroupAdministratorRights] Default administrator rights for adding
   /// the bot to basic group and supergroup chats; may be null
@@ -103,7 +103,7 @@ class BotInfo extends TdObject {
           ((json['commands'] as List<dynamic>?) ?? <dynamic>[])
               .map((item) => BotCommand.fromJson(item))
               .toList()),
-      privacyPolicyUrl: json['privacy_policy_url'] as String,
+      privacyPolicyUrl: json['privacy_policy_url'] as String?,
       defaultGroupAdministratorRights: ChatAdministratorRights.fromJson(
           json['default_group_administrator_rights'] as Map<String, dynamic>?),
       defaultChannelAdministratorRights: ChatAdministratorRights.fromJson(
