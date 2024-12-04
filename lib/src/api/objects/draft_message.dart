@@ -40,7 +40,7 @@ class DraftMessage extends TdObject {
       date: json['date'] as int,
       inputMessageText: InputMessageContent.fromJson(
           json['input_message_text'] as Map<String, dynamic>?)!,
-      effectId: int.tryParse(json['effect_id']) ?? 0,
+      effectId: int.tryParse((json['effect_id'] ?? "0")) ?? 0,
     );
   }
 
