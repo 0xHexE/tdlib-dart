@@ -157,7 +157,7 @@ class Supergroup extends TdObject {
       isBroadcastGroup: json['is_broadcast_group'] as bool,
       isForum: json['is_forum'] as bool,
       isVerified: json['is_verified'] as bool,
-      hasSensitiveContent: json['has_sensitive_content'] as bool,
+      hasSensitiveContent: (json['has_sensitive_content'] ?? false) as bool,
       restrictionReason: json['restriction_reason'] as String,
       isScam: json['is_scam'] as bool,
       isFake: json['is_fake'] as bool,
