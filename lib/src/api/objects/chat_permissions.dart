@@ -85,7 +85,7 @@ class ChatPermissions extends TdObject {
       canSendVoiceNotes: json['can_send_voice_notes'] as bool,
       canSendPolls: json['can_send_polls'] as bool,
       canSendOtherMessages: json['can_send_other_messages'] as bool,
-      canAddLinkPreviews: json['can_add_link_previews'] as bool,
+      canAddLinkPreviews: (json['can_add_link_previews'] ?? false) as bool,
       canChangeInfo: json['can_change_info'] as bool,
       canInviteUsers: json['can_invite_users'] as bool,
       canPinMessages: json['can_pin_messages'] as bool,
